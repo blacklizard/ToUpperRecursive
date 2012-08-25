@@ -20,16 +20,16 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 using namespace std;
 
 char * _toupper(char *str, int cur_pos, int len)
-{	
-	if(cur_pos == len){
-		return str;
-	}
-	else{
-		if(str[cur_pos]>='a'&&str[cur_pos]<='z'){
-			str[cur_pos]-=32;
-		}
-		return _toupper(str, cur_pos+1, len);
-	}
+{
+    if(cur_pos == len){
+        return str;
+    }
+    else{
+        if(str[cur_pos]>='a'&&str[cur_pos]<='z'){
+            str[cur_pos]-=32;
+        }
+        return _toupper(str, cur_pos+1, len);
+    }
 }
 
 
@@ -37,7 +37,7 @@ int main()
 {
     char str[256];
     cin >> str;
-	int len = strlen(str);
-	cout<<_toupper(str, 0, len);
-	return 0;
+    int len = strlen(str);
+    cout<<_toupper(str, 0, len);
+    return 0;
 }
